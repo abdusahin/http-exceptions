@@ -1,14 +1,21 @@
-# See http://about.travis-ci.org/docs/user/build-configuration/
 language: scala
 scala:
-   - 2.10.4
-   - 2.11.2
+- 2.10.4
+- 2.11.2
+script: sbt clean test scripted
 jdk:
-  - oraclejdk7
+- oraclejdk7
 branches:
   only:
-    - master
+  - master
 notifications:
   email:
     recipients:
-      - platform-engineering@digital.cabinet-office.gov.uk
+    - platform-engineering@digital.cabinet-office.gov.uk
+env:
+  global:
+  - secure: f0yWFP9szvSmGT66XvIlisKF3rz1P58tSicq3nZFHhrq/TlMd2diHcGJxZWCj3Phe+G3nL8i5OpKloomHenI4W9b06G2Dg0UMg8tObaEuYs0UWJ5mo4Sfmb9NnPyhwD5cvkxZ9P6FnWfe/r3n7y2nStRHUZkqrQJu871uLze54Q=
+  - secure: HFW1LY8vCNSyYCAOMRETz8jhmEegyeVG0fe+p62TN37GqCnj9Dtm/31LcGWVId6dAFfUsruvYSxHjxbWxPSKauB0QRG07VJG+hEsgmC+bkLpHI4bHXIk0j6AA/AScvbkWPDn3soMXscqv0ZkIgW5k9HfpfUsIIF2SwYnKGnMc5Q=
+
+after_success:
+  - "[[ $TRAVIS_BRANCH == \"master\" ]] && { sbt publish; };"
