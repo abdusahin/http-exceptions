@@ -15,5 +15,5 @@ after_success:
 - '[[ $TRAVIS_BRANCH == "master" ]] && { sbt publish; };'
 env:
   global:
-  - secure: jPmA+gF5j3r977AoOndLXHUjzq81J4nlR6zvhkSu6Mwg1QFOPw0oZMAClgm5uTA3gQEdaE7KIG6gy9FCbSHAFW007BMA+2ZWEUrtlQ3cpWjHN53swsJrcYviFw+JpnzEXwkQGZZ8kF12GklEbaO1smCGMBdrg/jKQ1Lu+L6f1Tk=
-  - secure: KJUjSRebr1ULzkuYbKW17m1rkKD2IoF5DNRTkeCMKTQwENMvlRTtD3jISyF9YdjHyYx+kKlnc0S7ewOkjc7jLq5tMjqcn0solyHch47JMpu/gY6oUUAMqeC4FPvB2GrYUaovKKWVB1wXJRAhJh5FPbqlrUSwBEyBnmJXwG9mZWw=
+  - secure: ILJTu36vjg1/4zUTL9Il4OXbYQemu7rcCLx87kdAB3C+NLk6DrNFTkvV1IQtyjRsH4o0qiLctvyD4hxp0+9eQDQPPeawZl7lzEaLyfBTP7iKsfkHns69k7NcY/L/RBKutRvXwS0kouirJHCSuw8xwZ218t5+PeNlrM6dgcEQ8ZA=
+  - secure: bUEpqr2z8+/7mham3YQb423sijdF2JUFQsko47BbRK5eAPNpI2IuvB1PkBCfLX0/oDyRE1zL88Q51simuyCFi3XMOFi2mKEtTJhZbqqzstQXur/z64hBKCZWanrIoLUATR/AV9xeFLDGYOJpJNqPtSj1Q+lMlFVr/fG6LRmTuZE=
