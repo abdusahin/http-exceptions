@@ -11,10 +11,9 @@ notifications:
   email:
     recipients:
     - platform-engineering@digital.cabinet-office.gov.uk
+after_success:
+- '[[ $TRAVIS_BRANCH == "master" ]] && { sbt publish; };'
 env:
   global:
-  - secure: f0yWFP9szvSmGT66XvIlisKF3rz1P58tSicq3nZFHhrq/TlMd2diHcGJxZWCj3Phe+G3nL8i5OpKloomHenI4W9b06G2Dg0UMg8tObaEuYs0UWJ5mo4Sfmb9NnPyhwD5cvkxZ9P6FnWfe/r3n7y2nStRHUZkqrQJu871uLze54Q=
-  - secure: HFW1LY8vCNSyYCAOMRETz8jhmEegyeVG0fe+p62TN37GqCnj9Dtm/31LcGWVId6dAFfUsruvYSxHjxbWxPSKauB0QRG07VJG+hEsgmC+bkLpHI4bHXIk0j6AA/AScvbkWPDn3soMXscqv0ZkIgW5k9HfpfUsIIF2SwYnKGnMc5Q=
-
-after_success:
-  - "[[ $TRAVIS_BRANCH == \"master\" ]] && { sbt publish; };"
+  - secure: Eg++9ukn+9WQUMo3CeL0eDy7bhJgia/Oh2QOXasvJ8w/00tun8W2qw69lVuxBFUADqXI+O0nfpSmFPpKR3fXLvx9VtpDcs55chR9dtuRZPDYYADDr5GGRZ0JnlF+ad4GlRpVNIOa0S8WVGRp690HI0oKQ7+Aie6IaqNMzvwe8RM=
+  - secure: NSVpE3aLsdHJk/+1gX1q3Mvu0VW6XYdJPKbnjx0r8IkQyFhgJDh8BYFIKN7weGg0D/wcuHR//qg8SpOnZJDopDT3LuWP1mSb5oicK6yL+sFDxAKBVtoy9fKqOGgL2BOccYqxP48f3BthBeAMOGaVcip2TxVEtlh04rsh3IQmZvs=
