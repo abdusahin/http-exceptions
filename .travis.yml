@@ -2,7 +2,6 @@ language: scala
 scala:
 - 2.10.4
 - 2.11.2
-script: sbt clean test scripted
 jdk:
 - oraclejdk7
 branches:
