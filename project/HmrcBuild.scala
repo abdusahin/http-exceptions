@@ -23,7 +23,7 @@ object HmrcBuild extends Build {
         Opts.resolver.sonatypeReleases,
         Opts.resolver.sonatypeSnapshots
       ),
-      crossScalaVersions := Seq("2.11.2", "2.10.4")
+      crossScalaVersions := Seq("2.11.5", "2.10.4")
     )
     .settings(SbtBuildInfo(): _*)
     .settings(SonatypeBuild(): _*)
