@@ -116,7 +116,7 @@ class HttpVersionNotSupportedException(message: String) extends HttpException(me
   
 class InsufficientStorageException(message: String) extends HttpException(message, INSUFFICIENT_STORAGE)
 
-case class Upstream4xxResponse(message: String, upstreamResponseCode: Int, reportAs: Int) extends Exception(message)
+case class Upstream4xxResponse(message: String, upstreamResponseCode: Int, reportAs: Int, headers:Map[String, Seq[String]] = Map.empty) extends Exception(message)
 
 case class Upstream5xxResponse(message: String, upstreamResponseCode: Int, reportAs: Int) extends Exception(message)
 
